@@ -1,8 +1,9 @@
 import React, { Component } from "react";
-import FeedbackOptions from "./components/feedbackOptions/FeedbackOptions";
-import Notification from "./components/notification/Notification";
-import Section from "./components/section/Section";
-import Statistics from "./components/statistics/Statistics";
+import FeedbackOptions from "../feedbackOptions/FeedbackOptions";
+import Notification from "../notification/Notification";
+import Section from "../section/Section";
+import Statistics from "../statistics/Statistics";
+import css from './App.module.css'
 class App extends Component {
   state = {
     good: 0,
@@ -36,7 +37,7 @@ class App extends Component {
     const totalValue = this.getStateTotalValue();
     const positivePercentage = this.positivePercentage();
     return (
-      <>
+      <div className={css.card}>
         <Section title={"Please leave feedback"}>
           <FeedbackOptions
             options={stateKeysForBtn}
@@ -56,7 +57,7 @@ class App extends Component {
             <Notification message="No feedback given" />
           )}
         </Section>
-      </>
+      </div>
     );
   }
 }

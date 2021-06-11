@@ -1,0 +1,32 @@
+.container {
+    /* margin: 0 auto; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-width: 100%;
+    
+}
+
+.btn {
+  font-weight: 700;
+  color: white;
+  text-decoration: none;
+  padding: 0.8em 1em calc(0.8em + 3px);
+  border-radius: 3px;
+  background: rgb(36, 41, 38);
+  box-shadow: 0 -3px rgb(34, 39, 36) inset;
+  transition: 0.2s;
+  width: 30%;
+}
+.btn:hover {
+  background: rgb(56, 63, 94);
+}
+.btn:active {
+  background: rrgb(56, 63, 94);
+  box-shadow: 0 3px rgb(56, 63, 94) inset;
+}
+
+
+.btn:not(:last-child) {
+    margin-right: 10px;
+}
