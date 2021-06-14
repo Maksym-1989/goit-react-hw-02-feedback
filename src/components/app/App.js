@@ -3,7 +3,7 @@ import FeedbackOptions from "../feedbackOptions/FeedbackOptions";
 import Notification from "../notification/Notification";
 import Section from "../section/Section";
 import Statistics from "../statistics/Statistics";
-import css from './App.module.css'
+import css from "./App.module.css";
 class App extends Component {
   state = {
     good: 0,
@@ -21,11 +21,12 @@ class App extends Component {
 
   positivePercentage = () => {
     const total = this.getStateTotalValue();
-    return total === 0 ? 0 : Math.round((this.state.good / total) * 100);
+    return total ? 0 : Math.round((this.state.good / total) * 100);
   };
 
   onLeaveFeedback = (event) => {
-    const currentStateKey = event.currentTarget.textContent;
+    console.log(event);
+    const currentStateKey = event.currentTarget.textContent.toLowerCase();
     this.setState((prevState) => ({
       [currentStateKey]: prevState[currentStateKey] + 1,
     }));

@@ -11,12 +11,8 @@ const Section = ({ children, title }) => {
   );
 };
 
-Section.defaultProps = {
-  title: "Some title",
-};
-
 Section.propTypes = {
-  title: PropTypes.string,
+  title: PropTypes.string.isRequired,
   children: PropTypes.node.isRequired,
 };
 
