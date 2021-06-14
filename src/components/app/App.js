@@ -25,7 +25,6 @@ class App extends Component {
   };
 
   onLeaveFeedback = (event) => {
-    console.log(event);
     const currentStateKey = event.currentTarget.textContent.toLowerCase();
     this.setState((prevState) => ({
       [currentStateKey]: prevState[currentStateKey] + 1,
